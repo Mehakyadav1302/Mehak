@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Doctors | HealthyLife</title>
+  <link rel="stylesheet" href="doctors.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">HealthyLife</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Appointments</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="doctors.html" class="active">Doctors</a>
+      <a href="Records.html">Records</a>
+    </nav>
+  </header>
+
+  <section class="doctors-hero">
+    <h1>Meet Our Experts</h1>
+    <p>Certified professionals across multiple specialties ready to help you.</p>
+  </section>
+
+  
+
+  <section class="doctors-grid">
+    <div class="doctor-card" data-specialty="Cardiologist" onclick="openModal('ayesha')">
+  <img src="https://wowpakistan.pk/wow2024/wp-content/uploads/2024/02/Dr.-Ayesha-Khan.jpg" alt="Dr. Ayesha Khan">
+  <h3>Dr. Ayesha Khan</h3>
+  <p>Cardiologist</p>
+  <span>Available: Mon-Fri</span>
+  <button>Book</button>
+</div>
+
+<div class="modal" id="modal-ayesha">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('ayesha')">&times;</span>
+      <h2>Dr. Ayesha Khan</h2>
+      <p><strong>Specialty:</strong> Cardiologist</p>
+      <p><strong>Experience:</strong> 12+ years treating cardiovascular diseases. Known for non-invasive techniques and holistic health approach.</p>
+    </div>
+  </div>
+
+<div class="doctor-card" data-specialty="Dermatologist" onclick="openModal('rahul')">
+    <img src="https://psrihospital.com/wp-content/uploads/2023/09/DSC_5833_cleanup.png" alt="Dr. Rahul Mehta">
+    <h3>Dr. Rahul Mehta</h3>
+    <p>Dermatologist</p>
+    <span>Available: Tue-Sat</span>
+    <button>Book</button>
+  </div>
+
+  <div class="modal" id="modal-rahul">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('rahul')">&times;</span>
+      <h2>Dr. Rahul Mehta</h2>
+      <p><strong>Specialty:</strong>Dermatologist</p>
+      <p><strong>Experience:</strong>Skilled in skincare and cosmetic dermatology with 9+ years managing chronic skin conditions and aesthetics. </p>
+    </div>
+  </div>
+    
+  <div class="doctor-card" data-specialty="Pediatrician" onclick="openModal('sneha')">
+    <img src="https://www.fccollege.edu.pk/wp-content/uploads/2024/02/Dr.-Ayesha-Khan.jpg" alt="Dr. Sneha Verma">
+    <h3>Dr. Sneha Verma</h3>
+    <p>Pediatrician</p>
+    <span>Available: Mon-Thu</span>
+    <button>Book</button>
+  </div>
+
+  <div class="modal" id="modal-sneha">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('sneha')">&times;</span>
+      <h2>Dr. Sneha Verma</h2>
+      <p><strong>Specialty:</strong>Pediatrician</p>
+      <p><strong>Experience:</strong>10+ years of experience in child health, specializing in developmental care and pediatric immunizations.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="doctor-card" data-specialty="General Medicine" onclick="openModal('Surbhi')">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG-0mSTeW4QUbPHp_RWK4OEL7jbr6Qo1S7iA&s" alt="Dr. Surbhi Yadav">
+    <h3>Dr. Surbhi Yadav</h3>
+    <p>General Medicine</p>
+    <span>Available: Mon-Sat</Wed-Sat></span>
+    <button>Book</button>
+  </div>
+
+  <div class="modal" id="modal-surbhi">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('surbhi')">&times;</span>
+      <h2>Dr. Surbhi Yadav</h2>
+      <p><strong>Specialty:</strong>General Medicine</p>
+      <p><strong>Experience:</strong>5+ years providing comprehensive primary care and chronic disease management across all age groups.
+
+      </p>
+    </div>
+  </div> 
+
+  <div class="doctor-card" data-specialty="Neurology" onclick="openModal('alok')">
+    <img src="https://starhospitalsproduction.s3.amazonaws.com/rIx9mgMQmrXrXjKuEDXC2Q8OA3Lx7LhI6TcBs8oF.jpg" alt="Dr. Alok Gupta">
+    <h3>Dr.Alok Gupta</h3>
+    <p>Neurologist</p>
+    <span>Available: wed-fri</span>
+    <button>Book</button>
+  </div>
+
+  <div class="modal" id="modal-alok">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('alok')">&times;</span>
+      <h2>Dr. Alok Gupta </h2>
+      <p><strong>Specialty:</strong>Neurologist </p>
+      <p><strong>Experience:</strong>Expert in diagnosing complex neurological disorders with 14+ years in brain and nerve system treatment. </p>
+    </div>
+  </div>
+
+  <div class="doctor-card" data-specialty="Gynaecologist" onclick="openModal('tammana')">
+    <img src="https://www.motherhoodindia.com/wp-content/uploads/2022/06/Dr.-Saloni-Dashore-1-683x1024.jpg" alt="Dr. Tammana Bhatia">
+    <h3>Dr. Tammana Bhatia</h3>
+    <p>Gynaecologist</p>
+    <span>Available: wed-fri</span>
+    <button>Book</button>
+  </div>
+
+  <div class="modal" id="modal-tammana">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('tammana')">&times;</span>
+      <h2>Dr. Tammana Bhatia</h2>
+      <p><strong>Specialty:</strong>Gynaecologist</p>
+      <p><strong>Experience:</strong>Over a decade of expertise in women’s reproductive health, prenatal care, and minimally invasive surgeries.</p>
+    </div>
+  </div>
+
+    <!-- Add more profiles as needed -->
+  </section>
+
+  <footer>
+    <p>© 2025 HealthyLife Clinic | All Rights Reserved</p>
+  </footer>
+
+  <script src="Doctors.js"></script>
+</body>
+</html>

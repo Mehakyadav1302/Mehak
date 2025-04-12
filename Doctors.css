@@ -1,0 +1,229 @@
+/* Base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #e8fdf5, #f3fcfb);
+  color: #2c3e50;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #67C4A7;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: #67C4A7;
+  color: white;
+}
+
+/* Hero */
+.doctors-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.doctors-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a3d36;
+  margin-bottom: 10px;
+}
+
+.doctors-hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* Grid Section */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Doctor Card */
+.doctor-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(103, 196, 167, 0.1);
+  transition: 0.4s ease;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.doctor-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.doctor-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.doctor-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  box-shadow: 0 0 10px rgba(103, 196, 167, 0.2);
+}
+
+.doctor-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3c3c;
+  margin-bottom: 8px;
+}
+
+.doctor-card p {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.doctor-card span {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.doctor-card button {
+  background-color: #67C4A7;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.doctor-card button:hover {
+  background-color: #4fa28c;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e8f7f2;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Filter bar */
+.filter-bar {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .filter-bar select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #67C4A7;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: slideIn 0.4s ease;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+    color: #1a3d36;
+  }
+  
+  .modal-content p {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Modal animation */
+  @keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

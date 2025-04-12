@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment | HealthyLife</title>
+  <link rel="stylesheet" href="Appointment.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1 class="logo">HealthyLife</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="appointment.html">Appointments</a>
+        <a href="Consultation.html">Consultation</a>
+        <a href="Doctors.html">Doctors</a>
+        <a href="Records.html">Records</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="appointment-section reveal">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <form class="appointment-form" onsubmit="return submitAppointment(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Select Department</label>
+          <select id="department" required>
+            <option value="">-- Choose --</option>
+            <option>General Medicine</option>
+            <option>Pediatrics</option>
+            <option>Cardiology</option>
+            <option>Dermatology</option>
+            <option>Neurology</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="doctor">Select Doctor</label>
+          <input type="text" id="doctor" placeholder="Dr. Smith, Dr. Patel..." required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" required />
+          </div>
+        </div>
+
+        <button class="btn" type="submit">Confirm Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 HealthyLife Clinic</p>
+  </footer>
+
+  <script src="Appointment.js"></script>
+</body>
+</html>
